@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "a8746193-50f6-4e98-8eeb-cea312a79c8a",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29027861"
+	},
+	"item": [
+		{
+			"name": "Register_books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\":\"09876\",\r\n    \"name\": \"Doce cuentos peregrinos\",\r\n    \"editorial\": \"norma\",\r\n    \"code_author\": \"123\",\r\n    \"reference\": \"explicación de por qué doce, por qué cuentos y por qué peregrinos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/register_books",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit_books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\":\"09876\",\r\n    \"name\": \"Doce cuentos peregrinos\",\r\n    \"editorial\": \"norma\",\r\n    \"code_author\": \"123\",\r\n    \"reference\": \"por qué doce, por qué cuentos y por qué peregrinos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/edit_book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"edit_book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search_one",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/search_book/09876",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search_book",
+						"09876"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"09876\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/delete_book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete_book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/delete_books_all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete_books_all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
